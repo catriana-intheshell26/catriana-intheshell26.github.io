@@ -1,0 +1,67 @@
+:root {
+    --bs-primary: #574f83; /* azul profundo */
+    --bs-primary-rgb: 25, 118, 210;
+  }
+
+  body {
+  background-color: #b6c6b6;
+  color: #0b5a64; /* texto claro para contraste */
+  font-family: 'Georgia', serif;
+  transition: background 1s ease;
+}
+
+  h1, h2, h3 {
+  color: var(--bs-primary);
+}
+.section {
+  padding: 70px 0; /* espacio arriba y abajo */
+}
+
+.btn-custom {
+  background-color: var(--bs-primary);
+  color: #1c4346;
+  border: none;
+}
+.btn-custom:hover {
+  background-color: #155fa0; /* un azul un poco más oscuro para hover */
+}
+
+.icono-tec {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin: auto;
+  background-color: #e3f2fd; /* azul muy claro */
+  border-radius: 8px;
+  padding: 8px;
+  border: 2px solid var(--bs-primary);
+}
+.carousel-indicators [data-bs-target] {
+  background-color: var(--bs-primary);
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: var(--bs-primary) !important;
+  font-weight: bold;
+}
+.fortaleza {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #0b5a64;
+}
+.acerca-card {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+.acerca-card:hover {
+  background-color: var(--bs-primary);
+  color: #fff;
+  transform: scale(1.02);
+}
+
+    
