@@ -1,11 +1,11 @@
 :root {
-    --bs-primary: #ccccd1; /* azul profundo */
+    --bs-primary: #7e7e96; /* azul profundo */
     --bs-primary-rgb: 25, 118, 210;
   }
 
   body {
   background-color: #15151a;
-  color: #5be6f8; /* texto claro para contraste */
+  color: #97b2b6; /* texto claro para contraste */
   font-family: 'Georgia', serif;
   transition: background 1s ease;
 }
@@ -20,7 +20,7 @@
 
 .btn-custom {
   background-color: var(--bs-primary);
-  color: #F7CAC9;
+  color: #2c1433;
   border: none;
 }
 .btn-custom:hover {
@@ -194,6 +194,7 @@ html {
   max-width: 700px;
   font-size: 1.1rem;
   line-height: 1.6;
+  position: center;
 }
 .navbar-mariana {
   background-color: #F7CAC9; /* Azul noche */
@@ -237,4 +238,23 @@ html {
     opacity: 15;
     transform: translateY(1);
   }
+}
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-title {
+  font-weight: 600;
+  color: #343a40;
+}
+
+.card-text {
+  color: #495057;
 }
