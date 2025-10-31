@@ -1,14 +1,15 @@
 :root {
-    --bs-primary: #574f83; /* azul profundo */
+    --bs-primary: #ccccd1; /* azul profundo */
     --bs-primary-rgb: 25, 118, 210;
   }
 
   body {
-  background-color: #b6c6b6;
-  color: #0b5a64; /* texto claro para contraste */
+  background-color: #15151a;
+  color: #5be6f8; /* texto claro para contraste */
   font-family: 'Georgia', serif;
   transition: background 1s ease;
 }
+
 
   h1, h2, h3 {
   color: var(--bs-primary);
@@ -19,11 +20,24 @@
 
 .btn-custom {
   background-color: var(--bs-primary);
-  color: #1c4346;
+  color: #F7CAC9;
   border: none;
 }
 .btn-custom:hover {
   background-color: #155fa0; /* un azul un poco más oscuro para hover */
+}
+
+.proyecto-card {
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.proyecto-card:hover {
+  transform: scale(1.05);
+  background-color: #e0f7fa; /* tono suave tipo agua */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .icono-tec {
@@ -64,4 +78,163 @@
   transform: scale(1.02);
 }
 
-    
+.bloque-lateral {
+  position: fixed;
+  width: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateY(-200px);
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  z-index: 1000;
+}
+
+.izquierda {
+  left: 30px;
+  top: 100px;
+}
+
+.derecha {
+  right: 30px;
+  top: 100px;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.oculto {
+  display: none;
+}
+
+
+.carrusel-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(22, 4, 29, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.carrusel-centro {
+  width: 80%;
+  max-width: 800px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.cerrar-carrusel {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #331b5a;
+  border: none;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 0 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(60, 13, 78, 0.3);
+}
+
+.oculto {
+  display: none;
+}
+.seccion-decorada {
+  position: relative;
+  padding-left: 250px; /* espacio para que el texto no se encime */
+}
+
+.imagen-flotante {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 200px;
+  height: auto;
+  z-index: 0;
+  opacity: 0.9;
+}
+
+.contenido {
+  position: relative;
+  z-index: 1;
+}
+html {
+  scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en el menú */
+}
+
+.section {
+  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 1rem;
+  background-color: hsl(80, 50, 280%); /* Puedes personalizar el fondo */
+  scroll-margin-top: 80px; /* Evita que el navbar tape el título */
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  max-width: 700px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.navbar-mariana {
+  background-color: #F7CAC9; /* Azul noche */
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-mariana .nav-link {
+  color: #201a1a; /* Blanco suave */
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-mariana .nav-link:hover {
+  color: #F7CAC9; /* Rosa ballet */
+}
+
+.navbar-mariana .navbar-brand {
+  color: #2a282e; /* Lavanda tenue */
+  font-weight: bold;
+}
+.fondo-about {
+  background-image: url('/Img/mari.jpg');
+  background-size: fit-content;
+  background-position: center;
+  min-height: 80vh;
+  padding: 1rem 1rem;
+  color: rgb(224, 215, 215);
+}
+.frase-cielo {
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: caerDelCielo 2s ease-out forwards;
+  text-align: center;
+  margin-top: 2rem;
+  color: #F7CAC9; /* Rosa ballet */
+}
+
+@keyframes caerDelCielo {
+  to {
+    opacity: 15;
+    transform: translateY(1);
+  }
+}
